@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\amend\OneDrive\Desktop\Programacion Orientada a Objetos\Ejercicios\Tp1\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1288848795.index
+2356011476.index

@@ -1,0 +1,7 @@
+package administrarempleados;
+import net.datastructures.SinglyLinkedList;
+
+public class Empresa {
+
+	
+}

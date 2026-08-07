@@ -1,0 +1,5 @@
+package administrarempleados;
+
+public class Empleado {
+
+}

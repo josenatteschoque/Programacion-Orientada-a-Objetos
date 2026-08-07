@@ -1,0 +1,13 @@
+package administrarempleados;
+
+public class Departamento {
+	private int codigo;
+	private String nombre;
+	
+	public Departamento(int codigo, String nombre) {
+		super();
+		this.codigo = codigo;
+		this.nombre = nombre;
+	}
+	
+}

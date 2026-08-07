@@ -1,0 +1,10 @@
+package administrarempleados;
+
+public class Empresa {
+
+	public Empresa() {
+		super();
+	}
+	
+	
+}
