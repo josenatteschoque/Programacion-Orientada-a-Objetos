@@ -1,7 +1,0 @@
-package administrarempleados;
-
-public class Empleado {
-	private String nombre;
-	private int legajo;
-	
-}

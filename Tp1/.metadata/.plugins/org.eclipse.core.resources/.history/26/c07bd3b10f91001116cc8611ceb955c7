@@ -1,7 +1,0 @@
-package administrarempleados;
-
-public class Departamento {
-	private int codigo;
-	private String nombre;
-	
-}
