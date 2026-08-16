@@ -1,12 +1,14 @@
 package ferreteria;
 
+import java.util.Objects;
+
 public class Articulo {
 	private int codigo;
 	private String descripcion;
-	private float precio;
-	private int cantidad;
+	private Double precio;
+	private Double cantidad;
 	
-	public Articulo(int codigo, String descripcion, float precio, int cantidad) {
+	public Articulo(int codigo, String descripcion, Double precio, Double cantidad) {
 		super();
 		this.codigo = codigo;
 		this.descripcion = descripcion;
@@ -30,22 +32,40 @@ public class Articulo {
 		this.descripcion = descripcion;
 	}
 	
-	public float getPrecio() {
+	public Double getPrecio() {
 		return precio;
 	}
 	
-	public void setPrecio(float precio) {
+	public void setPrecio(Double precio) {
 		this.precio = precio;
 	}
 	
-	public int getCantidad() {
+	public Double getCantidad() {
 		return cantidad;
 	}
 	
-	public void setCantidad(int cantidad) {
+	public void setCantidad(Double cantidad) {
 		this.cantidad = cantidad;
 	}
 	
+	@Override
+	public int hashCode() {
+		return Objects.hash(cantidad, codigo, descripcion, precio);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Articulo other = (Articulo) obj;
+		return cantidad == other.cantidad && codigo == other.codigo && Objects.equals(descripcion, other.descripcion)
+				&& Objects.equals(precio, other.precio);
+	}
+
 	@Override
 	public String toString() {
 		return "Articulo [codigo=" + codigo + ", descripcion=" + descripcion + ", precio=" + precio + ", cantidad="
