@@ -5,11 +5,13 @@ import java.util.Objects;
 public class ItemFactura {
 	private double cantidad;
 	private double precio;
+	private Articulo articulo;
 	
-	public ItemFactura(double cantidad, double precio) {
+	public ItemFactura(double cantidad, double precio, Articulo articulo) {
 		super();
 		this.cantidad = cantidad;
 		this.precio = precio;
+		this.articulo = articulo;
 	}
 	
 	public double getCantidad() {
@@ -27,10 +29,18 @@ public class ItemFactura {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
+	
+	public Articulo getArticulo() {
+		return articulo;
+	}
+	
+	public void setArticulo(Articulo articulo) {
+		this.articulo = articulo;
+	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(cantidad, precio);
+		return Objects.hash(articulo, cantidad, precio);
 	}
 
 	@Override
@@ -42,14 +52,16 @@ public class ItemFactura {
 		if (getClass() != obj.getClass())
 			return false;
 		ItemFactura other = (ItemFactura) obj;
-		return Double.doubleToLongBits(cantidad) == Double.doubleToLongBits(other.cantidad)
+		return Objects.equals(articulo, other.articulo)
+				&& Double.doubleToLongBits(cantidad) == Double.doubleToLongBits(other.cantidad)
 				&& Double.doubleToLongBits(precio) == Double.doubleToLongBits(other.precio);
 	}
 
 	@Override
 	public String toString() {
-		return "ItemFactura [cantidad=" + cantidad + ", precio=" + precio + "]";
+		return "ItemFactura [cantidad=" + cantidad + ", precio=" + precio + ", articulo=" + articulo + "]";
 	}
 	
+
 	
 }

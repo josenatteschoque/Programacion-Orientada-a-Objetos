@@ -107,12 +107,6 @@ public class Negocio {
 	    }
 	}
 	
-	//Clase que me permite lanzar una exception 
-	public class ArticuloRepetidoException extends Exception{
-		public ArticuloRepetidoException(String mensaje) {
-			super(mensaje);
-		}
-	}
 	
 	//Metodo para evaluar la excepciones del stock
 	public void vender(Articulo articulo, double cantidadVendida) throws StockInsuficienteException {
@@ -121,19 +115,6 @@ public class Negocio {
 	    }
 	    articulo.setCantidad(articulo.getCantidad() - cantidadVendida);
 	}
-	
-	public void agregarItem(ItemFactura item) throws ArticuloRepetidoException {
-		for(Articulo articulo: this.articulos) {
-			if(articulo.equals(item)) {
-				throw new ArticuloRepetidoException("Articulo repetido"+articulo.getDescripcion());
-			}
-		}
-		
-	    // acá va el for + if + throw
-	    // pista: es el mismo patrón que usaste en empleadosACargo,
-	    // recorrer y comparar con equals()
-	}
-	
 	
 	
 }

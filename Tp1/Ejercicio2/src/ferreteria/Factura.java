@@ -3,6 +3,8 @@ package ferreteria;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+
+
 import java.util.ArrayList;
 
 public class Factura {
@@ -63,8 +65,23 @@ public class Factura {
 		return "Factura [numero=" + numero + ", fecha=" + fecha + ", items=" + items + "]";
 	}
 	
-	//Metodo para agragar los items ala lista
-	public void agragarItem(ItemFactura item) {
-		items.add(item);
+	
+	//Clase que me permite lanzar una exception 
+	public class ArticuloRepetidoException extends Exception{
+		public ArticuloRepetidoException(String mensaje) {
+			super(mensaje);
+		}
+	}
+	
+	public void agregarItem(ItemFactura item) throws ArticuloRepetidoException {
+		//Recorro toda la lista
+		for(ItemFactura i: this.items) {
+			//Veo si el articulo esta repetido 
+			if(i.getArticulo().equals(item.getArticulo())) {
+				throw new ArticuloRepetidoException("Articulo repetido"+item.getArticulo().getDescripcion());
+			}
+		}
+		//Si no esta repetido lo agrego ala lista 
+		this.items.add(item);
 	}
 }
