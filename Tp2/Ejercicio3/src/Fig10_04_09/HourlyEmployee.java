@@ -61,13 +61,6 @@ public class HourlyEmployee extends Employee
          "hours worked", getHours() );
    } // end method toString
 
-   @Override
-   public double salary(LocalDate date) {
-	   if ( getHours() <= 40 ) // no overtime
-	         return getWage() * getHours();
-	      else
-	         return 40 * getWage() + ( getHours() - 40 ) * getWage() * 1.5;
-   }
 } // end class HourlyEmployee
 
 

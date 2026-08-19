@@ -42,11 +42,7 @@ public class SalariedEmployee extends Employee
          super.toString(), "weekly salary", getWeeklySalary() );
    } // end method toString
 
-   @Override
-   public double salary(LocalDate date) {
-	// TODO Auto-generated method stub
-	return 0;
-   }
+   
 } // end class SalariedEmployee
 
 

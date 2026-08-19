@@ -9,7 +9,7 @@ public abstract class Employee
    private String firstName;
    private String lastName;
    private String socialSecurityNumber;
-   private LocalDate BirthDate;
+   private LocalDate birthDate;
    private static final int addictional = 100;
 
    // three-argument constructor
@@ -21,11 +21,11 @@ public abstract class Employee
    } // end three-argument Employee constructor
 
    public LocalDate getBirthDate() {
-	return BirthDate;
+	return birthDate;
 }
 
    public void setBirthDate(LocalDate birthDate) {
-	this.BirthDate = birthDate;
+	this.birthDate = birthDate;
    }
 
    public static int getAddictional() {
@@ -79,10 +79,10 @@ public abstract class Employee
    public abstract double earnings(); // no implementation here
    
    public double salary(LocalDate date) {
-	   if(date == this.getBirthDate()) {
-		   return this.earnings() + this.getAddictional();
+	   if(birthDate != null && date.getMonthValue() == birthDate.getMonthValue()) {
+		   return earnings() + getAddictional();
 	   }
-	   return this.earnings();
+	   return earnings();
 	   
    }
 } // end abstract class Employee
