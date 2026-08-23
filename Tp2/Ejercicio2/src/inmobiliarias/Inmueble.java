@@ -53,8 +53,9 @@ public abstract class Inmueble {
 			System.out.println ("Se super� el m�ximo de interesados para este inmueble");
 			return;
 		}
-		if (interesados.isEmpty())
-			interesados.add(c);
+		
+		interesados.add(c);
+		cantidadInteresados++;
 			/*= new Cliente [maximoInteresados];
 		interesados [cantidadInteresados] = c;
 		cantidadInteresados++;
@@ -62,10 +63,10 @@ public abstract class Inmueble {
 	}
 
 	private int posicionInteresado (Cliente c) {
-		if (interesados.isEmpty())
-			return -1;
-		if(interesados.get(cantidadInteresados).equals(c)) {
-			return interesados.indexOf(c);
+		for(int pos = 0; pos < cantidadInteresados; pos++) {
+			if(interesados.get(pos).equals(c)) {
+				return pos;
+			}
 		}
 		return -1;
 		/*
@@ -81,6 +82,7 @@ public abstract class Inmueble {
 		if (pos > -1) {	// encontr� el cliente
 			// voy a eliminar el elemento del arreglo por compresi�n
 			interesados.remove(pos);
+			cantidadInteresados--;
 			/*
 			for (int i = pos; i < cantidadInteresados-1; i++) {
 				interesados[i] = interesados[i+1];

@@ -35,8 +35,9 @@ public class Inmobiliaria {
 			System.out.println ("Se super� el m�ximo de inmuebles para esta inmobiliaria");
 			return;
 		}
-		if (inmuebles == null)
-			inmuebles.add(x); 
+		inmuebles.add(x);
+		cantidadInmuebles++;
+		
 			/*= new Inmueble [maximoInmuebles];
 		inmuebles [cantidadInmuebles] = x;
 		cantidadInmuebles++;
@@ -58,6 +59,8 @@ public class Inmobiliaria {
 		if (pos > -1) {	// encontr� el inmueble
 			// voy a eliminar el elemento del arreglo por compresi�n
 			inmuebles.remove(pos);
+			cantidadInmuebles --;
+			
 			/*
 			for (int i = pos; i < cantidadInmuebles-1; i++) {
 				inmuebles[i] = inmuebles [i+1];
