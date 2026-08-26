@@ -4,7 +4,8 @@ public abstract class Cliente {
 	
 	private Domicilio direccion;
 	private String email;
-	private static final int maximoCuentas = 10;
+	private static int maximoCuentas = 10;
+
 	private CuentaBancaria[ ] cuentas;
 	
 	private int cantidadCuentas;
@@ -16,7 +17,15 @@ public abstract class Cliente {
 		this.cuentas = new CuentaBancaria [maximoCuentas];
 		this.cantidadCuentas = 0;
 	}
+	
+	public static int getMaximoCuentas() {
+		return maximoCuentas;
+	}
 
+	public static void setMaximoCuentas(int maximoCuentas) {
+		Cliente.maximoCuentas = maximoCuentas;
+	}
+	
 	public Domicilio getDireccion ( ) {
 			return direccion;
 	}
