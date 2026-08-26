@@ -1,9 +1,9 @@
-package carlosfontela.pruebas;
+package pruebas;
 
 import java.awt.Color;
 
 import junit.framework.TestCase;
-import carlosfontela.geometria.*;
+import geometria.*;
 
 public class PruebaFiguras extends TestCase {
 
@@ -12,19 +12,19 @@ public class PruebaFiguras extends TestCase {
 	private FiguraCompuesta compuesta;
 	
 	protected void setUp( ) throws Exception {
-		// elipse con radios 2 y 1, girada 90º y con centro en 3;3
+		// elipse con radios 2 y 1, girada 90ï¿½ y con centro en 3;3
 		elipseGirada = new Elipse (2, 1, new Punto(3,3), Math.PI/2, Color.red);
 		// elipse con radios 3 y 2, sin girar y con centro en 0;0
 		elipseCentrada = new Elipse (3, 2, Color.red);
-		// círculo con centro en 0;0:
+		// cï¿½rculo con centro en 0;0:
 		circulo = new Elipse (2, 2, Color.red);
-		// triángulo rectángulo:
+		// triï¿½ngulo rectï¿½ngulo:
 		Punto[ ] t = { new Punto(0, 0), new Punto(0, 3), new Punto(4, 0) }; 
 		triangulo = new Poligono(t, Color.red);
 		// cuadrado:
 		Punto[ ] c = { new Punto(0, 0), new Punto(0, 1), new Punto(1, 1), new Punto(1, 0) }; 
 		cuadrado = new Poligono(c, Color.red);
-		// rectángulo:
+		// rectï¿½ngulo:
 		Punto[ ] r = { new Punto(0, 0), new Punto(0, 3), new Punto(5, 3), new Punto(5, 0) }; 
 		rectangulo = new Poligono(r, Color.red);
 		// figura compuesta:
@@ -53,19 +53,19 @@ public class PruebaFiguras extends TestCase {
 	public void testTipo( ) {
 		assertEquals ("elipse", elipseGirada.tipo( ));
 		assertEquals ("elipse", elipseCentrada.tipo( ));
-		assertEquals ("círculo", circulo.tipo( ));
-		assertEquals ("triángulo", triangulo.tipo( ));
+		assertEquals ("cï¿½rculo", circulo.tipo( ));
+		assertEquals ("triï¿½ngulo", triangulo.tipo( ));
 		assertEquals ("cuadrado", cuadrado.tipo( ));
-		assertEquals ("cuadrilátero", rectangulo.tipo( ));
+		assertEquals ("cuadrilï¿½tero", rectangulo.tipo( ));
 		assertEquals ("figura compuesta", compuesta.tipo( ));
 	}
 
 	public void testTrasladar( ) {
-		// probar traslación del centro del círculo:
+		// probar traslaciï¿½n del centro del cï¿½rculo:
 		circulo.trasladar(2, 2);
 		assertEquals (new Punto(2, 2).getX( ),circulo.getCentro( ).getX( ), 1E-4);
 		assertEquals (new Punto(2, 2).getY( ),circulo.getCentro( ).getY( ), 1E-4);
-		// probar constancia del área después de la traslación del rectángulo:
+		// probar constancia del ï¿½rea despuï¿½s de la traslaciï¿½n del rectï¿½ngulo:
 		double a = rectangulo.area( );
 		rectangulo.trasladar(3, 7);
 		assertEquals (a, rectangulo.area( ), 1E-4);

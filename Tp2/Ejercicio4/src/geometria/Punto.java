@@ -1,6 +1,6 @@
 // Punto.java
 
-package carlosfontela.geometria;
+package geometria;
 
 public class Punto {
 
@@ -32,7 +32,7 @@ public class Punto {
 			coordY = valor;
 		}
 
-		// métodos:
+		// mï¿½todos:
 
 		public void trasladar (double deltaX, double deltaY) {
 			coordX += deltaX;

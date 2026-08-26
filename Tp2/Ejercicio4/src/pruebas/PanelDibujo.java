@@ -8,11 +8,11 @@ import java.awt.Graphics;
 
 import javax.swing.JPanel;
 
-import carlosfontela.geometria.Elipse;
-import carlosfontela.geometria.Figura;
-import carlosfontela.geometria.FiguraCompuesta;
-import carlosfontela.geometria.Poligono;
-import carlosfontela.geometria.Punto;
+import geometria.Elipse;
+import geometria.Figura;
+import geometria.FiguraCompuesta;
+import geometria.Poligono;
+import geometria.Punto;
 
 public class PanelDibujo extends JPanel {
 

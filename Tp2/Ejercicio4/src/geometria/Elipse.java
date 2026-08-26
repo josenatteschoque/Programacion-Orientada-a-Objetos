@@ -1,5 +1,5 @@
 // Elipse.java
-package carlosfontela.geometria;
+package geometria;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -50,12 +50,12 @@ public class Elipse extends Figura {
 	}
 
 	private static double E1(double k) {
-		// TODO: tabla de integral elíptica
+		// TODO: tabla de integral elï¿½ptica
 		return 0;
 	}
 
 	public double perimetro() {
-		// caso del círculo:
+		// caso del cï¿½rculo:
 		if (getRadioMayor() == getRadioMenor())
 			return (Math.PI * 2 * getRadioMayor());
 		// caso general:
@@ -67,7 +67,7 @@ public class Elipse extends Figura {
 
 	public String tipo() {
 		if (getRadioMayor() == getRadioMenor())
-			return "círculo";
+			return "cï¿½rculo";
 		else
 			return "elipse";
 	}

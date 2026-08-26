@@ -1,4 +1,4 @@
-package carlosfontela.geometria;
+package geometria;
 
 public class Segmento {
 
@@ -26,7 +26,7 @@ public class Segmento {
 		return extremo1.distancia(extremo2);
 	}
 
-	// el ángulo que forma con el eje x (en radianes)
+	// el ï¿½ngulo que forma con el eje x (en radianes)
 	public double getAnguloX ( ) {
 			return Math.atan(
 				(extremo2.getY() - extremo1.getY()) / (extremo2.getX() - extremo1.getX()) );

@@ -1,5 +1,5 @@
 // FiguraCompuesta.java
-package carlosfontela.geometria;
+package geometria;
 
 import java.awt.Graphics;
 
@@ -12,8 +12,8 @@ public class FiguraCompuesta extends Figura {
 	}
 
 	public double area() {
-		// TODO: hacer bien este método
-		// esta es una simplificación que supone que no hay superposición entre
+		// TODO: hacer bien este mï¿½todo
+		// esta es una simplificaciï¿½n que supone que no hay superposiciï¿½n entre
 		// componentes
 		double superficie = 0;
 		for (int i = 0; i < componentes.length; i++)
@@ -22,8 +22,8 @@ public class FiguraCompuesta extends Figura {
 	}
 
 	public double perimetro() {
-		// TODO: hacer bien este método
-		// esta es una simplificación que supone que no hay superposición entre
+		// TODO: hacer bien este mï¿½todo
+		// esta es una simplificaciï¿½n que supone que no hay superposiciï¿½n entre
 		// componentes
 		double perimetro = 0;
 		for (int i = 0; i < componentes.length; i++)

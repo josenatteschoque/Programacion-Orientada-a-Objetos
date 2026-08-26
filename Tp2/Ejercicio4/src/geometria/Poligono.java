@@ -1,5 +1,5 @@
 // Poligono.java
-package carlosfontela.geometria;
+package geometria;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -11,7 +11,7 @@ public class Poligono extends Figura {
 
 	public Poligono(Punto[] contorno, Color colorBorde) {
 		if (contorno.length < 3)
-			// veremos el significado de lo que sigue en un capítulo posterior:
+			// veremos el significado de lo que sigue en un capï¿½tulo posterior:
 			throw new IllegalArgumentException();
 		this.contorno = contorno;
 		this.colorBorde = colorBorde;  		
@@ -47,7 +47,7 @@ public class Poligono extends Figura {
 			return new Segmento(contorno[i], contorno[0]);
 	}
 
-	// verifica si es un polígono con todos sus lados iguales
+	// verifica si es un polï¿½gono con todos sus lados iguales
 	public boolean regular() {
 		for (int i = 0; i < contorno.length - 1; i++) {
 			if (lado(i).getLongitud() != lado(i + 1).getLongitud())
@@ -58,40 +58,40 @@ public class Poligono extends Figura {
 
 	public String tipo() {
 		if (numeroLados() == 3 && regular())
-			return "triángulo equilátero";
+			return "triï¿½ngulo equilï¿½tero";
 		if (numeroLados() == 4 && regular())
 			return "cuadrado";
 		String nombre = null;
 		switch (numeroLados()) {
 		case 3:
-			nombre = "triángulo";
+			nombre = "triï¿½ngulo";
 			break;
 		case 4:
-			nombre = "cuadrilátero";
+			nombre = "cuadrilï¿½tero";
 			break;
 		case 5:
-			nombre = "pentágono";
+			nombre = "pentï¿½gono";
 			break;
 		case 6:
-			nombre = "hexágono";
+			nombre = "hexï¿½gono";
 			break;
 		case 7:
-			nombre = "heptágono";
+			nombre = "heptï¿½gono";
 			break;
 		case 8:
-			nombre = "octógono";
+			nombre = "octï¿½gono";
 			break;
 		case 9:
-			nombre = "nonágono";
+			nombre = "nonï¿½gono";
 			break;
 		case 10:
-			nombre = "decágono";
+			nombre = "decï¿½gono";
 			break;
 		case 12:
-			nombre = "dodecágono";
+			nombre = "dodecï¿½gono";
 			break;
 		case 20:
-			nombre = "icoságono";
+			nombre = "icosï¿½gono";
 			break;
 		default:
 			nombre = "sin nombre";

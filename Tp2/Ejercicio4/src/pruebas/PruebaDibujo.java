@@ -1,4 +1,4 @@
-package carlosfontela.pruebas;
+package pruebas;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;

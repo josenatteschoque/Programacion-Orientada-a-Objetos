@@ -1,5 +1,5 @@
 // Figura.java
-package carlosfontela.geometria;
+package geometria;
 
 import java.awt.Graphics;
 
