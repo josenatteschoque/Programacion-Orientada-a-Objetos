@@ -46,13 +46,14 @@ public abstract class Cliente {
 			return cuentas;
 	}
 
-	public boolean agregarCuenta (CuentaBancaria cuenta) {
+	public void agregarCuenta (CuentaBancaria cuenta) throws ClienteMaxCuentasException{
 		if (cantidadCuentas < maximoCuentas) {
 			cuentas [cantidadCuentas] = cuenta;
 			cantidadCuentas++;
-			return true;
 		}
-		else return false;
+		else {
+			throw new ClienteMaxCuentasException("Supera el maximo de cuentas!");
+		}
 	}
 	
 	public int getCantidadCuentas ( ) {

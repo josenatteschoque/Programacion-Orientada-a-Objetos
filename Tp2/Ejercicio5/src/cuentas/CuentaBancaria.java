@@ -7,14 +7,10 @@ public abstract class CuentaBancaria {
 	private double saldo;
 
 	public CuentaBancaria (int numero, Cliente titular) {
-		boolean ok = titular.agregarCuenta(this);
-		if (ok) {
+			titular.agregarCuenta(this);
 			this.numero = numero;
 			this.titular = titular;
 			this.saldo = 0;
-		}
-		// veremos el significado de lo que sigue en un cap�tulo posterior:
-		else throw new IllegalArgumentException( );
 	}
 
 	public int getNumero ( ) {

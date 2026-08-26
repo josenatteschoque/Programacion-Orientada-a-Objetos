@@ -1,4 +1,4 @@
-package pruebas;
+package pruebas2;
 
 import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -6,13 +6,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import carlosfontela.cuentas.CajaAhorro;
-import carlosfontela.cuentas.Cliente;
-import carlosfontela.cuentas.CuentaBancaria;
-import carlosfontela.cuentas.CuentaCorriente;
-import carlosfontela.cuentas.Empresa;
-import carlosfontela.cuentas.Persona;
-import carlosfontela.cuentas.SaldoInsuficienteException;
+import cuentas.CajaAhorro;
+import cuentas.Cliente;
+import cuentas.CuentaBancaria;
+import cuentas.CuentaCorriente;
+import cuentas.Empresa;
+import cuentas.Persona;
+import cuentas.SaldoInsuficienteException;
 
 class TestCuentas1 {
 
