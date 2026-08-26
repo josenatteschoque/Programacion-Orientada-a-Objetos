@@ -1,4 +1,4 @@
-package carlosfontela.pruebas;
+package pruebas2;
 
 import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -6,14 +6,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import carlosfontela.cuentas.CajaAhorro;
-import carlosfontela.cuentas.Cliente;
-import carlosfontela.cuentas.ClienteMaxCuentasException;
-import carlosfontela.cuentas.CuentaBancaria;
-import carlosfontela.cuentas.CuentaCorriente;
-import carlosfontela.cuentas.Empresa;
-import carlosfontela.cuentas.Persona;
-import carlosfontela.cuentas.SaldoInsuficienteException;
+import cuentas.CajaAhorro;
+import cuentas.Cliente;
+import cuentas.ClienteMaxCuentasException;
+import cuentas.CuentaBancaria;
+import cuentas.CuentaCorriente;
+import cuentas.Empresa;
+import cuentas.Persona;
+import cuentas.SaldoInsuficienteException;
 
 class TestCuentas2 {
 
@@ -28,11 +28,11 @@ class TestCuentas2 {
 	@BeforeEach
 	void setUp() throws Exception {
 		Cliente.setMaximoCuentas(5);
-		juan = new Persona("Juan", "Pérez", 5122122, "Lima", 444, "Belgrano", "Venezuela", "C1000AAA", "01140101010",
+		juan = new Persona("Juan", "Pï¿½rez", 5122122, "Lima", 444, "Belgrano", "Venezuela", "C1000AAA", "01140101010",
 				"juan@perez.com.ar");
-		ines = new Persona("Inés", "García", 4011011, "Cerrito", 1111, "Santa Fe", "Arenales", "C1111ZZZ",
+		ines = new Persona("Inï¿½s", "Garcï¿½a", 4011011, "Cerrito", 1111, "Santa Fe", "Arenales", "C1111ZZZ",
 				"01140001111", "ines@garcia.com.ar");
-		empresa = new Empresa("Luna Nueva S.A.", "1701234562", "Freire", 8888, "Dorrego", "Concepción Arenal",
+		empresa = new Empresa("Luna Nueva S.A.", "1701234562", "Freire", 8888, "Dorrego", "Concepciï¿½n Arenal",
 				"C0000YYY", "01199991000", "info@empresa.com.ar");
 		cajaAhorro1 = new CajaAhorro(1234, juan);
 		cajaAhorro2 = new CajaAhorro(5678, ines);
