@@ -21,4 +21,16 @@ public class CajaAhorro extends CuentaBancaria {
 		setSaldo ( getSaldo() + interesesGanados );
 		interesesGanados = 0;
 	}
+
+	@Override
+	public boolean extraer(double monto) {
+		// TODO Auto-generated method stub
+		if(monto > getSaldo()){
+			return false;
+		}else {
+			double nuevo = getSaldo() - monto;
+			setSaldo(nuevo);
+			return true;
+		}
+	}
 }

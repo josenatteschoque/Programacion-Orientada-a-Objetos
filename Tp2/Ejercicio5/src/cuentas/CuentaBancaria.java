@@ -13,7 +13,7 @@ public abstract class CuentaBancaria {
 			this.titular = titular;
 			this.saldo = 0;
 		}
-		// veremos el significado de lo que sigue en un capítulo posterior:
+		// veremos el significado de lo que sigue en un capï¿½tulo posterior:
 		else throw new IllegalArgumentException( );
 	}
 
@@ -37,12 +37,12 @@ public abstract class CuentaBancaria {
 		saldo += monto;
 	}
 
-	public boolean extraer (double monto) {
-		if (monto > saldo)
+	public abstract boolean extraer(double monto);
+		/*if (monto > saldo)
 			return false;
 		else {
 			saldo -= monto;
-			return true;
-		}
-	}
+			return true; 
+		}*/
+	
 }
