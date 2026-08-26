@@ -37,7 +37,7 @@ public abstract class CuentaBancaria {
 		saldo += monto;
 	}
 
-	public abstract boolean extraer(double monto);
+	public abstract void extraer(double monto);
 		/*if (monto > saldo)
 			return false;
 		else {
