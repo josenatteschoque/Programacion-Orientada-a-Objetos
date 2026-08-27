@@ -31,6 +31,12 @@ public class PruebaFiguras extends TestCase {
 		Figura[ ] f = { triangulo, rectangulo };
 		compuesta = new FiguraCompuesta(f);
 	}
+	
+	public void testFigurasEquable() {
+		assertEquals (true, circulo.figuraEquable());
+		assertEquals (false, triangulo.figuraEquable());
+		//assertEquals (true, elipseGirada.figuraEquable());
+	}
 
 	public void testArea( ) {
 		assertEquals (Math.PI*2*1, elipseGirada.area( ), 1E-4);
