@@ -55,6 +55,22 @@ public abstract class Cliente {
 			throw new ClienteMaxCuentasException("Supera el maximo de cuentas!");
 		}
 	}
+	//g)Implementar el método saldoTotal() en la clase Cliente que retorna la suma del saldo de todas las cuentas para un cliente. 
+	public double saldoTotal() {
+		double saldo = 0;
+		for(int i = 0; i < cantidadCuentas; i++) {
+			saldo += cuentas[i].getSaldo();
+		}
+		return saldo;
+ 	}
+	
+	public double saldoDisponibleTotal() {
+		double saldo = 0;
+		for(int i = 0; i < cantidadCuentas; i++) {
+			saldo += cuentas[i].saldoDisponible();
+		}
+		return saldo;
+	}
 	
 	public int getCantidadCuentas ( ) {
 			return cantidadCuentas;

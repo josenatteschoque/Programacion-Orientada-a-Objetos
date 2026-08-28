@@ -29,4 +29,10 @@ public class CuentaCorriente extends CuentaBancaria {
 	public void setDescubierto (double valor) {
 			descubierto = valor;
 	}
+
+	@Override
+	public double saldoDisponible() {
+		// TODO Auto-generated method stub
+		return this.getSaldo() + this.getDescubierto();
+	}
 }

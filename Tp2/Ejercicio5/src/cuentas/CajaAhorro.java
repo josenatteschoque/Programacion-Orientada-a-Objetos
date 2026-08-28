@@ -32,4 +32,10 @@ public class CajaAhorro extends CuentaBancaria {
 			setSaldo(plata);
 		}
 	}
+
+	@Override
+	public double saldoDisponible() {
+		// TODO Auto-generated method stub
+		return this.getSaldo();
+	}
 }

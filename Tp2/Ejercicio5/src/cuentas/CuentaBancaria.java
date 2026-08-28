@@ -40,5 +40,6 @@ public abstract class CuentaBancaria {
 			saldo -= monto;
 			return true; 
 		}*/
+	public abstract double saldoDisponible();
 	
 }
