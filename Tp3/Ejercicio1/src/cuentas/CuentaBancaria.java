@@ -1,0 +1,45 @@
+package cuentas;
+
+public abstract class CuentaBancaria implements OperacionBanco{
+
+	private int numero;
+	private Cliente titular;
+	private double saldo;
+
+	public CuentaBancaria (int numero, Cliente titular) {
+			titular.agregarCuenta(this);
+			this.numero = numero;
+			this.titular = titular;
+			this.saldo = 0;
+	}
+
+	public int getNumero ( ) {
+			return numero;
+	}
+
+	public Cliente getTitular ( ){
+			return titular;
+	}
+
+	public double getSaldo ( ) {
+			return saldo;
+	}
+
+	protected void setSaldo (double saldo) {
+		this.saldo = saldo;
+	}
+
+	public void depositar (double monto) {
+		saldo += monto;
+	}
+
+	public abstract void extraer(double monto);
+		/*if (monto > saldo)
+			return false;
+		else {
+			saldo -= monto;
+			return true; 
+		}*/
+	public abstract double saldoDisponible();
+	
+}
