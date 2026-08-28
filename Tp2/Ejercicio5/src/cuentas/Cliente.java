@@ -72,6 +72,30 @@ public abstract class Cliente {
 		return saldo;
 	}
 	
+	public void pagarTarjetaCredito(double importe) throws SaldoInsuficienteException{
+		if(importe > saldoDisponibleTotal()) {
+			throw new SaldoInsuficienteException("Saldo Insuficiente!");
+		}
+		
+		double restante = importe;
+		for(int i = 0; i < cantidadCuentas && restante > 0; i++) {
+			if(cuentas[i] instanceof CajaAhorro) {
+				double aDebitar = Math.min(restante, cuentas[i].saldoDisponible());
+				
+				cuentas[i].setSaldo(cuentas[i].getSaldo() - aDebitar);
+				restante -= aDebitar;
+			}
+		}
+		
+		for(int j = 0; j < cantidadCuentas && restante > 0; j++) {
+			if(cuentas[j] instanceof CuentaCorriente) {
+				double aDebitar = Math.min(restante, cuentas[j].saldoDisponible());
+				cuentas[j].setSaldo(cuentas[j].getSaldo() - aDebitar);
+				restante -= aDebitar;
+			}
+		}
+	}
+	
 	public int getCantidadCuentas ( ) {
 			return cantidadCuentas;
 	}
