@@ -16,7 +16,7 @@ public class CuentaCorriente extends CuentaBancaria {
 
 	public void extraer (double monto) throws SaldoInsuficienteException{
 		if (monto > getSaldo() + descubierto)
-			throw new SaldoInsuficienteException("Saldo insuficiente: "+getSaldo());
+			throw new SaldoInsuficienteException("Saldo: "+getSaldo());
 		else {
 			setSaldo ( getSaldo() - monto );
 		}

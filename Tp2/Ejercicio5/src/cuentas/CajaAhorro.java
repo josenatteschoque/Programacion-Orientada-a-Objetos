@@ -26,7 +26,7 @@ public class CajaAhorro extends CuentaBancaria {
 	public void extraer(double monto) throws SaldoInsuficienteException{
 		// TODO Auto-generated method stub
 		if(monto > getSaldo()){
-			throw new SaldoInsuficienteException("Saldo insuficiente: "+getSaldo());
+			throw new SaldoInsuficienteException("Saldo: "+getSaldo());
 		}else {
 			double plata = getSaldo() - monto;
 			setSaldo(plata);
