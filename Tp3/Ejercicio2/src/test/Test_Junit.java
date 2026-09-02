@@ -23,7 +23,7 @@ public class Test_Junit {
 	
 	@Test
 	void test() {
-		
+		asserEquals();
 	}
    
 }
