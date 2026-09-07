@@ -11,8 +11,8 @@ import business.Employee;
 
 public class Test_Junit {
 	private Payable payableObjects[] = new Payable[ 4 ];
-	private SalariedEmployee empleado1;
-	private SalariedEmployee empleado2;
+	private Employee empleado1;
+	private Employee empleado2;
 	private Invoice factura1;
 	private Invoice factura2;
 	
@@ -31,30 +31,62 @@ public class Test_Junit {
 	}
 	
 	//Invoice 2 * 375.00 = 750 
-	//Invoice 4 * 79.95 = 319.8
 	@Test
 	void testInvoice() {
 		assertEquals(750, payableObjects[0].getPaymentAmount());
+	}
+
+	//Invoice 4 * 79.95 = 319.8
+	void testInvoice1() {
 		assertEquals(319.8, payableObjects[1].getPaymentAmount());
 	}
 	
    @Test
    void testSalariedEmployee() {
 	   assertEquals(800.00, payableObjects[2].getPaymentAmount());
+   }
+   
+   @Test
+   void testSalariedEmployee1() {
 	   assertEquals(1200.00, payableObjects[3].getPaymentAmount());
    }
    
-   //VErifico sus nombres
+//////////////////////////GETTERS////////////////////////////////////////
    @Test
-   void testFirstName() {
+   void testGetFirstName() {
 	   assertEquals("John", empleado1.getFirstName());
 	   assertEquals("Lisa", empleado2.getFirstName());
    }
-   
+
    @Test
-   void testLastName() {
+   void testGetLastName() {
 	   assertEquals("Smith", empleado1.getLastName());
 	   assertEquals("Barnes", empleado2.getLastName());
+   }
+   
+   ///////////////////////SETTERS///////////////////////////////////////
+   @Test
+   void setFirsName() {
+	   empleado1.setFirstName("Jose");
+	   assertEquals("Jose", empleado1.getFirstName());
+   }
+   
+   @Test
+   void setFirsName1() {
+	   empleado2.setFirstName("Leo");
+	   assertEquals("Leo", empleado2.getFirstName());
+   }
+   
+   @Test
+   void setLastName() {
+	   empleado1.setLastName("Nattes");
+	   assertEquals("Nattes", empleado1.getLastName());
+   }
+   
+   @Test
+   void setLastName1() {
+	   empleado2.setLastName("Aguilar");
+	   assertEquals("Aguilar", empleado2.getLastName());
    }
    
    @Test
@@ -62,5 +94,6 @@ public class Test_Junit {
 	   assertEquals("111-11-1111", empleado1.getSocialSecurityNumber());
 	   assertEquals("888-88-8888", empleado2.getSocialSecurityNumber());
    }
- 
+   
+   //Falta Testear mas metodos pero que huevaaa
 }
