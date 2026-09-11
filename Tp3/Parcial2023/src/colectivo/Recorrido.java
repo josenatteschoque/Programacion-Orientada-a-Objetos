@@ -27,11 +27,17 @@ public class Recorrido {
 		int pOrigen = localidades.indexOf(origen);
 		int pDestino = localidades.indexOf(destino);
 
-		if(pOrigen <= pDestino) {
+		//subList devuelve una lista entre origen (incluida) y destino (sin incluir)
+		
+		if(pOrigen >= 0 && pDestino <= localidades.size() && pOrigen <= pDestino) {
 			listado = localidades.subList(pOrigen, pDestino);
 		}
 		
 		return listado;
 	}
 
+	//Metodo que agrega una localidad ala lista
+	public void agregarLocalidad(Localidad l) {
+		localidades.add(l);
+	}
 }
