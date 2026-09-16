@@ -63,6 +63,11 @@ public abstract class Vehiculo {
 	public abstract double calcularCostoViaje(int distancia);
 	
 	public double calcularPrecioViaje(int distancia) {
+	    return calcularCostoViaje(distancia) * (1 + porComisionVehiculo / 100.0);
+	}
+	
+	/*
+	public double calcularPrecioViaje(int distancia) {
 	    double costo = calcularCostoViaje(distancia);
 
 	    if (this instanceof Auto) {
@@ -72,5 +77,5 @@ public abstract class Vehiculo {
 	    }
 
 	    return costo;
-	}
+	}*/
 }
