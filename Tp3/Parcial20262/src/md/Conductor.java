@@ -53,7 +53,7 @@ public class Conductor implements Contribuyente{
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(cuit, nombre, viajes);
+		return Objects.hash(cuit);
 	}
 
 	@Override
@@ -65,8 +65,7 @@ public class Conductor implements Contribuyente{
 		if (getClass() != obj.getClass())
 			return false;
 		Conductor other = (Conductor) obj;
-		return Objects.equals(cuit, other.cuit) && Objects.equals(nombre, other.nombre)
-				&& Objects.equals(viajes, other.viajes);
+		return Objects.equals(cuit, other.cuit);
 	}
 
 	@Override

@@ -40,7 +40,7 @@ public abstract class Vehiculo {
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(modelo, patente);
+		return Objects.hash(patente);
 	}
 
 	@Override
@@ -52,7 +52,7 @@ public abstract class Vehiculo {
 		if (getClass() != obj.getClass())
 			return false;
 		Vehiculo other = (Vehiculo) obj;
-		return Objects.equals(modelo, other.modelo) && Objects.equals(patente, other.patente);
+		return Objects.equals(patente, other.patente);
 	}
 
 	@Override
