@@ -43,12 +43,9 @@ public class Conductor implements Contribuyente{
 		Conductor.porComisionAplicacion = porComisionAplicacion;
 	}
 
+	//Devuelve una copia de la lista
 	public List<Viaje> getViajes() {
-		return viajes;
-	}
-
-	public void setViajes(List<Viaje> viajes) {
-		this.viajes = viajes;
+		return new ArrayList<Viaje>(viajes);
 	}
 
 	@Override
