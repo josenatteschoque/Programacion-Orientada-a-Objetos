@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="12" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mensajes.ui.impl.javafx.controller.MensajesController">
+    <Label text="%message.choose" />
+    <ComboBox fx:id="opciones" promptText="%message.prompt" />
+    <Button onAction="#mostrar" text="%message.show" />
+    <Label fx:id="resultado" text="%message.initial" />
+   <Button mnemonicParsing="false" onAction="#limpiar" text="\%message.clear" />
+</VBox>
